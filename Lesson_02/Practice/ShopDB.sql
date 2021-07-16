@@ -1,0 +1,43 @@
+USE ShopDB
+GO
+
+CREATE TABLE Accounts (
+	id INT PRIMARY KEY IDENTITY,
+	[login] VARCHAR(20) NOT NULL,
+	[password] VARCHAR(20) NOT NULL
+);
+GO
+
+
+CREATE TABLE UserInfos (
+	id INT PRIMARY KEY IDENTITY,
+	firstName NVARCHAR(20) NOT NULL,
+	lastName NVARCHAR(20) NOT NULL,
+	birth DATE
+);
+GO
+
+
+CREATE TABLE Orders (
+	id INT PRIMARY KEY IDENTITY,
+	[time] TIME NOT NULL,
+	amount INT NOT NULL
+);
+GO
+
+
+CREATE TABLE Producs (
+	id INT PRIMARY KEY IDENTITY,
+	[name] NVARCHAR(20) NOT NULL,
+	price MONEY NOT NULL,
+	[description] NVARCHAR(60) NOT NULL
+);
+GO
+
+
+CREATE TABLE Categories (
+	id INT PRIMARY KEY IDENTITY,
+	[name] NVARCHAR(20) NOT NULL,
+	amount INT NOT NULL
+);
+GO
